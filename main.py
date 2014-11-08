@@ -90,6 +90,27 @@ finalWordCounts.sort()
 print "Number of students:", numbrOfStudents
 print list(reversed(finalWordCounts))[:10]
 
+topTenWords=[]
+topTenWords=list(reversed(finalWordCounts))[:10]
 
+##PLOTTING SHITTTTTTT
+import plotly.plotly as py
+from plotly.graph_objs import *
+# Fill in with your personal username and API key
+# or, use this public demo account
+py.sign_in('sbrill', '0gvkq9193t')
 
+names = []
+values = []
+for z in topTenWords:
+    names.append(z[1])
+    values.append(z[0])
+
+data = Data([
+    Bar(
+        x=names,
+        y=values
+    )
+])
+plot_url = py.plot(data, filename='basic-bar')
 #print textFiles
