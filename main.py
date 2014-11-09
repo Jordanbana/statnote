@@ -46,14 +46,15 @@ for words in textFiles:
     counts = get_words(words)
     counts.sort()
     counts = list(reversed(counts))
-    print counts
+    """print counts"""
 
+"""
 print ""
 print ""
 print filteredWordsFromEachFile
 print ""
 print ""
-
+"""
 
 #starting to cross refernce all notes and see what words are the same
 i = 0
@@ -77,9 +78,11 @@ for x in filteredWordsFromEachFile:
         finalWordCounts.append(x)
 
 finalWordCounts.sort()
+"""
 print list(reversed(finalWordCounts))
 print ""
 print ""
+"""
 
 
 #lets get the averages of every word!
@@ -88,10 +91,10 @@ for x in range(len(filteredWordsFromEachFile)):
 
 finalWordCounts.sort()
 print "Number of students:", numbrOfStudents
-print list(reversed(finalWordCounts))[:10]
+print list(reversed(finalWordCounts))[:15]
 
 topTenWords=[]
-topTenWords=list(reversed(finalWordCounts))[:10]
+topTenWords=list(reversed(finalWordCounts))[:15]
 
 ##PLOTTING SHITTTTTTT
 import plotly.plotly as py
@@ -121,8 +124,9 @@ if menuInput.lower() == "yes":
     keywordSearch = raw_input("What keyword or phrase do you want to search for?: ")
     for i in finalWordCounts:
         if keywordSearch == i[1]:
-            print "YO"
+            keywordSearchResults = i[0]
+            print keywordSearchResults
 elif menuInput.lower() == "no":
     print "FINE!"
-else:
+elif menuInput != "no" or menuInput != "yes":
     print "Not a valid search"
