@@ -114,3 +114,15 @@ data = Data([
 ])
 plot_url = py.plot(data, filename='basic-bar')
 #print textFiles
+
+
+menuInput = raw_input("Would you like to search for a specific keyword? (yes or no): ")
+if menuInput.lower() == "yes":
+    keywordSearch = raw_input("What keyword or phrase do you want to search for?: ")
+    for i in finalWordCounts:
+        if keywordSearch == i[1]:
+            print "YO"
+elif menuInput.lower() == "no":
+    print "FINE!"
+else:
+    print "Not a valid search"
