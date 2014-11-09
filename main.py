@@ -96,6 +96,8 @@ print list(reversed(finalWordCounts))[:15]
 topTenWords=[]
 topTenWords=list(reversed(finalWordCounts))[:15]
 
+
+
 ##PLOTTING SHITTTTTTT
 import plotly.plotly as py
 from plotly.graph_objs import *
@@ -119,6 +121,8 @@ plot_url = py.plot(data, filename='basic-bar')
 #print textFiles
 
 
+
+#searching part
 menuInput = raw_input("Would you like to search for a specific keyword? (yes or no): ")
 if menuInput.lower() == "yes":
     keywordSearch = raw_input("What keyword or phrase do you want to search for?: ")
